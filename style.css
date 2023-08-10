@@ -1,0 +1,107 @@
+body {
+    background-color: var(--main-color);
+    color: #424874;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    
+}
+:root{
+    --main-color:#F4EEFF;
+    --primary-color:#424874;
+    --secondary-color:#A6B1E1;
+}
+.questions {
+    max-width: 42%;
+    min-width: 42%;
+   height: 90vh;
+   margin: 20px auto;
+}
+@media  screen and (max-width:1060px) {
+    .questions {
+        max-width: 85%;
+        min-width: 85%;
+       height: 90vh;
+       margin: 20px auto;
+    } 
+}
+.questions h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 60px
+}
+
+.questions .section-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px;
+    
+
+
+
+}
+
+.question-title button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 30px;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    margin-right: 10px;
+    color: var(--secondary-color);
+    cursor: pointer;
+
+}
+.question-text{
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid var(--primary-color); */
+    border-radius: 8px;
+    border-top:0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 10px;
+    
+}
+.question{
+    flex: 1;
+    border: 1px solid #ccc;
+    transition: flex 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+.show-text .question-title{
+    border-bottom: 2px solid;
+}
+.show-text .question-text{
+    display: flex;
+}
+.show-text{
+    
+        max-height: none; /* Rimuove la limitazione di altezza */
+        overflow: hidden; /* Nasconde eventuali contenuti oltre l'altezza massima */
+        transition: max-height 0.3s ease-in-out; /* Animazione della transizione */
+    
+}
+span.minus-icon{
+    display: none;
+}
+
+.show-text span.minus-icon{
+    display: inline;
+}
+.show-text span.plus-icon{
+    display: none;
+}
