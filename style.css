@@ -4,8 +4,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: 'Kanit', sans-serif;
     
+}
+footer{
+    position: absolute;
+    bottom: 1%;
 }
 :root{
     --main-color:#F4EEFF;
